@@ -14,10 +14,10 @@ suites:
     attributes:
     driver:
       network:
-        - ["private_network", ip: "10.0.2.10"]
+        - ["private_network", { type: "dhcp" }]
   - name: test_instance
     run_list:
     attributes:
     driver:
       network:
-        - ["private_network", ip: "10.0.2.20"]
+        - ["private_network", { type: "dhcp" }]
