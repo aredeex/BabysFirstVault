@@ -1,0 +1,7 @@
+DEPENDENCIES
+  babys_first_vault
+    path: .
+    metadata: true
+
+GRAPH
+  babys_first_vault (0.1.0)
