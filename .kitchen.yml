@@ -1,0 +1,23 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-16.04
+
+suites:
+  - name: vault_server
+    run_list: hashi_vault
+    attributes:
+    driver:
+      network:
+        - ["private_network", ip: "10.0.2.10"]
+  - name: test_instance
+    run_list:
+    attributes:
+    driver:
+      network:
+        - ["private_network", ip: "10.0.2.20"]
